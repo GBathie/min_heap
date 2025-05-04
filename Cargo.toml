@@ -1,6 +1,6 @@
 [package]
 name = "min-heap"
-version = "1.1.0"
+version = "1.0.0"
 edition = "2024"
 authors = ["BATHIE, Gabriel <gbathie.dev@gmail.com>"]
 description = "A Min Priority Queue implemented as a Thin Wrapper around BinaryHeap from the Standard Library"

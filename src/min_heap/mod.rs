@@ -734,6 +734,7 @@ impl<T> MinHeap<T> {
 /// and converts it to items of type `T`.
 ///
 /// Used for [`Drain`] and [`IntoIter`].
+#[derive(Debug, Clone)]
 pub struct IterWrapper<It, T>
 where
     It: Iterator<Item = Reverse<T>>,
@@ -810,6 +811,7 @@ pub type Drain<'a, T> = IterWrapper<binary_heap::Drain<'a, Reverse<T>>, T>;
 /// and converts it to items of type `&T`.
 ///
 /// Used for [`Iter`].
+#[derive(Debug, Clone)]
 pub struct IterRefWrapper<'a, It, T>
 where
     It: Iterator<Item = &'a Reverse<T>>,

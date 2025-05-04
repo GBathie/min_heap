@@ -7,6 +7,7 @@ use std::{
 ///
 /// This `struct` is created by the [`MinHeap::peek_mut`](super::MinHeap::peek_mut). See
 /// its documentation for more.
+#[derive(Debug)]
 pub struct PeekMut<'a, T: Ord> {
     underlying: std::collections::binary_heap::PeekMut<'a, Reverse<T>>,
 }
