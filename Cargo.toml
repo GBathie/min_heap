@@ -1,0 +1,14 @@
+[package]
+name = "min-heap"
+version = "1.0.0"
+edition = "2024"
+authors = ["BATHIE, Gabriel <gbathie.dev@gmail.com>"]
+description = "A Min Priority Queue implemented as a Thin Wrapper around BinaryHeap from the Standard Library"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/GBathie/min_heap"
+readme = "README.md"
+keywords = ["min heap", "min", "binary", "heap", "priority", "queue"]
+categories = ["data-structures", "algorithms", ]
+
+[dev-dependencies]
+rand = "0.9.1"
