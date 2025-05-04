@@ -9,6 +9,10 @@ repository = "https://github.com/GBathie/min_heap"
 readme = "README.md"
 keywords = ["min heap", "min", "binary", "heap", "priority", "queue"]
 categories = ["data-structures", "algorithms", ]
+exclude = [
+    "Cargo.lock",
+    ".github/",
+]
 
 [dev-dependencies]
 rand = "0.9.1"
