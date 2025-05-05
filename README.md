@@ -1,6 +1,11 @@
-# `MinHeap` 
+# `MinHeap` &emsp; [![Build Status]][actions] [![Latest Version]][crates.io]
 
-**MinHeap: A Min Priority Queue implemented as a Thin Wrapper around [`BinaryHeap<Reverse<T>>`] from the standard library.**
+[Build Status]: https://img.shields.io/github/actions/workflow/status/GBathie/min_heap/rust.yml?branch=main
+[actions]: https://github.com/GBathie/min_heap/actions?query=branch%3Amain
+[Latest Version]: https://img.shields.io/crates/v/min-heap.svg
+[crates.io]: https://crates.io/crates/min-heap
+
+**MinHeap: A Min Priority Queue implemented as a Thin Wrapper around `BinaryHeap<Reverse<T>>` from the standard library.**
 
 ---
 

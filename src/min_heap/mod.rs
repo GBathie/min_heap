@@ -1,9 +1,10 @@
 use std::{
     cmp::Reverse,
     collections::{BinaryHeap, TryReserveError, binary_heap},
-    hash::Hash,
     iter::FusedIterator,
 };
+
+pub(crate) mod peek;
 
 use peek::PeekMut;
 
@@ -81,52 +82,12 @@ pub struct MinHeap<T> {
     inner: BinaryHeap<Reverse<T>>,
 }
 
-pub(crate) mod peek;
-
 impl<T> Default for MinHeap<T>
 where
     T: Ord,
 {
     fn default() -> Self {
         Self::new()
-    }
-}
-
-impl<T> PartialEq for MinHeap<T>
-where
-    BinaryHeap<Reverse<T>>: PartialEq,
-{
-    fn eq(&self, other: &Self) -> bool {
-        self.inner == other.inner
-    }
-}
-
-impl<T> Eq for MinHeap<T> where BinaryHeap<Reverse<T>>: Eq {}
-
-impl<T> PartialOrd for MinHeap<T>
-where
-    BinaryHeap<Reverse<T>>: PartialOrd,
-{
-    fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
-        self.inner.partial_cmp(&other.inner)
-    }
-}
-
-impl<T> Ord for MinHeap<T>
-where
-    BinaryHeap<Reverse<T>>: Ord,
-{
-    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
-        self.inner.cmp(&other.inner)
-    }
-}
-
-impl<T> Hash for MinHeap<T>
-where
-    BinaryHeap<Reverse<T>>: Hash,
-{
-    fn hash<H: std::hash::Hasher>(&self, state: &mut H) {
-        self.inner.hash(state);
     }
 }
 
